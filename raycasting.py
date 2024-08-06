@@ -73,13 +73,13 @@ while True:
     key = keyboard.read_key()
     x, y = (posx, posy)
 
-    if key == 'up':
+    if key == 'up' or key == 'w':
         x, y = (x + .3*np.cos(rot), y + .3*np.sin(rot))
-    elif key == 'down':
+    elif key == 'down' or key == 's':
         x, y = (x - .3*np.cos(rot), y - .3*np.sin(rot))
-    elif key == 'left':
+    elif key == 'left' or key == 'a':
         rot = rot - np.pi/8
-    elif key == 'right':
+    elif key == 'right' or key == 'd':
         rot = rot + np.pi/8
     elif key == "esc":
         break
